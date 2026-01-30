@@ -1,5 +1,110 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  background-color: var(--back-main-color);
+  background-image: var(--back-main-image);
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+}
+
+.header {
+  min-block-size: 668px;
+  display: grid;
+  grid-template-rows: minmax(228px, auto) min-content minmax(228px, auto);
+  padding: 10px;
+  position: relative;
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--accent-color);
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.header__decoration {
+  position: absolute;
+  right: 19px;
+  top: 10px;
+  width: 56px;
+  height: 26px;
+  text-align: left;
+  display: block;
+  line-height: 25px;
+  font-family: var(--main-font);
+  font-weight: var(--main-weight);
+  color: var(--accent-color);
+  font-size: var(--main-size);
+  text-transform: uppercase;
+}
+
+.header__decoration::after {
+  content: "";
+  position: absolute;
+  height: 9px;
+  width: 9px;
+  background-color: var(--accent-color);
+  border-radius: 100%;
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+  top: 8px;
+  right: 0;
+}
+
+.header__theme-menu {
+  display: grid;
+  justify-content: end;
+  align-content: center;
+  font-family: var(--main-font);
+  color: var(--accent-color);
+  font-weight: var(--main-weight);
+  font-size: var(--main-size);
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+} 
+
+.header__theme-menu-button {
+  block-size: 26px;
+  inline-size: 70px;
+  border: transparent;
+  background-color: transparent;
+}
+
+.header__title {
+  font-family: var(--main-font);
+  color: var(--title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  font-weight: var(--title-weight);
+  font-size: var(--title-size);
+  line-height: var(--title-line-height);
+}
+
+.header__text {
+  font-family: var(--main-font);
+  color: var(--back-main-color);
+  font-weight: var(--title-weight);
+  font-size: var(--main-size);
+  line-height: var(--main-line-height);
+  align-self: center;
+}
+
+.title-decor {
+  background-color: var(--accent-color);
 }

@@ -197,7 +197,7 @@ ul .header__theme-menu-button_active:hover {
   position: relative;
   font-family: var(--main-font);
   color: var(--title-color);
-  text-shadow: 4px 4px 0 var(--accent-color);
+  text-shadow: 2px 2px 0px var(--accent-color);
   font-weight: var(--title-weight);
   font-size: var(--title-size);
   line-height: var(--title-line-height);

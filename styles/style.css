@@ -68,25 +68,47 @@
   display: grid;
   justify-content: end;
   align-content: center;
-  font-family: var(--main-font);
-  color: var(--accent-color);
-  font-weight: var(--main-weight);
-  font-size: var(--main-size);
 }
 
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
   gap: 10px;
-} 
+}
 
 .header__theme-menu-button {
   block-size: 26px;
   inline-size: 70px;
-  border: transparent;
+  border: none;
   background-color: transparent;
+  outline: none;
+  font-family: var(--main-font);
+  color: var(--accent-color);
+  font-weight: var(--main-weight);
+  font-size: var(--main-size);
+  text-transform: lowercase;
 }
 
+/* -- поставить слово в кнопке по середине - */
+
+.header__theme-menu-button:hover {
+  outline: 1px solid rgba(255, 0, 112, 0.4);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+ul .header__theme-menu-button_active {
+  outline: 1px solid var(--accent-color);
+}
+
+ul .header__theme-menu-button_active:hover {
+  outline: 1px solid var(--accent-color);
+}
+
+/* ----------------------- */
 .header__title {
   font-family: var(--main-font);
   color: var(--title-color);

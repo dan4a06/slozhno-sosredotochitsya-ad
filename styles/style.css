@@ -79,6 +79,7 @@
 }
 
 .header__theme-menu-button {
+  cursor: pointer;
   block-size: 26px;
   inline-size: 70px;
   border: none;
@@ -102,6 +103,7 @@
 }
 
 ul .header__theme-menu-button_active {
+  pointer-events: none;
   outline: 1px solid var(--accent-color);
 }
 
@@ -134,7 +136,7 @@ ul .header__theme-menu-button_active:hover {
 .main {
   margin-block: 40px;
   padding: 0 10px;
-  min-block-size: 5355px;
+  /* min-block-size: 5355px; */
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -146,12 +148,22 @@ ul .header__theme-menu-button_active:hover {
   gap: 20px;
 }
 
+.main__section:nth-of-type(4) {
+  gap: 10px;
+}
+
 .section__title {
   font-family: var(--main-font);
   font-weight: var(--title-weight);
   font-size: var(--main-size);
   line-height: var(--main-line-height);
   color: var(--accent-color);
+}
+
+.section__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .textblock {
@@ -169,11 +181,11 @@ ul .header__theme-menu-button_active:hover {
 }
 
 .textblock-subtitle {
-    font-family: var(--main-font);
-    font-weight: var(--main-weight);
-    font-size: var(--main-size);
-    line-height: var(--main-line-height);
-    color: var(--back-main-color);
+  font-family: var(--main-font);
+  font-weight: var(--main-weight);
+  font-size: var(--main-size);
+  line-height: var(--main-line-height);
+  color: var(--back-main-color);
 }
 
 .textblock-text {
@@ -201,4 +213,60 @@ ul .header__theme-menu-button_active:hover {
   font-weight: var(--title-weight);
   font-size: var(--title-size);
   line-height: var(--title-line-height);
+}
+
+@media (width >= 768px) {
+  .header__text {
+    max-inline-size: 50%;
+    justify-self: end;
+  }
+
+  .main__section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .section__content {
+    grid-column: 2 / 4
+  }
+
+  .main__section:nth-of-type(2) .section__content {
+    grid-column: 1 / 4;
+  }
+
+  .main__section:nth-of-type(4) {
+    gap: 20px;
+    grid-template-rows: repeat(4, auto);
+  }
+
+  .main__section:nth-of-type(4) .textblock-title {
+    grid-row: 1;
+    grid-column: span 3;
+  }
+
+  .section__img:nth-of-type(1) {
+    grid-row: 2;
+    grid-column: span 2;
+  }
+
+  .section__img:nth-of-type(2) {
+    object-fit: cover;
+    grid-row: 2 / 4;
+    grid-column: 3;
+  }
+
+  .section__img:nth-of-type(3) {
+    object-fit: cover;
+    grid-row: 3 / 5;
+    grid-column: 1;
+  }
+
+  .section__img:nth-of-type(4) {
+    grid-row: 3 ;
+    grid-column: 2;
+  }
+
+  .section__img:nth-of-type(5) {
+    grid-row: 4;
+    grid-column: 2 / 4;
+  }
 }

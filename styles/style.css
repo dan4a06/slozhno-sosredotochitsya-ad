@@ -94,7 +94,7 @@
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid rgba(255, 0, 112, 0.4);
+  outline: 1px solid var(--button-hover);
 }
 
 .header__theme-menu-button:focus {
@@ -122,7 +122,7 @@ ul .header__theme-menu-button_active:hover {
 
 .header__text {
   font-family: var(--main-font);
-  color: var(--back-main-color);
+  color: var(--main-color-title);
   font-weight: var(--title-weight);
   font-size: var(--main-size);
   line-height: var(--main-line-height);
@@ -157,7 +157,7 @@ ul .header__theme-menu-button_active:hover {
   font-weight: var(--title-weight);
   font-size: var(--main-size);
   line-height: var(--main-line-height);
-  color: var(--accent-color);
+  color: var(--main-color-title);
 }
 
 .section__content {
@@ -177,7 +177,7 @@ ul .header__theme-menu-button_active:hover {
   font-weight: var(--title-weight);
   font-size: var(--main-size);
   line-height: var(--main-line-height);
-  color: var(--back-main-color);
+  color: var(--main-color-title);
 }
 
 .textblock-subtitle {
@@ -185,7 +185,7 @@ ul .header__theme-menu-button_active:hover {
   font-weight: var(--main-weight);
   font-size: var(--main-size);
   line-height: var(--main-line-height);
-  color: var(--back-main-color);
+  color: var(--main-color-title);
 }
 
 .textblock-text {
@@ -194,6 +194,18 @@ ul .header__theme-menu-button_active:hover {
   font-size: var(--main-size);
   line-height: var(--main-line-height);
   color: var(--main-color);
+}
+
+.textblock-text a {
+  text-shadow: 1px 1px 0 var(--accent-color);
+}
+
+.textblock-text a:hover {
+  border-bottom: 2px solid var(--main-color);
+}
+
+.textblock-text a:focus {
+  outline: 1px solid var(--main-color);
 }
 
 .section__img {
@@ -269,4 +281,33 @@ ul .header__theme-menu-button_active:hover {
     grid-row: 4;
     grid-column: 2 / 4;
   }
+}
+
+@media (width >= 1024px) {
+  .header__theme-menu {
+      display: flex;
+      justify-content: center;
+    }
+
+    .header__theme-menu-list {
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    .main__section:nth-of-type(2) .section__content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .main__section:nth-of-type(2) .textblock:nth-of-type(1) {
+      grid-column: 1;
+    }
+    
+    .main__section:nth-of-type(2) .textblock:nth-of-type(2) {
+      grid-column: 2;
+    }
+    
+    .main__section:nth-of-type(2) .textblock:nth-of-type(3) {
+      grid-column: 3;
+    }    
 }

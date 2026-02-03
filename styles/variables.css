@@ -4,8 +4,6 @@
 */
 
 :root {
-  --back-main-color: #000028;
-  --back-main-image: url("../images/cover-image.png");
   --main-font: "IBM Plex Mono";
   --main-size: 18px;
   --title-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -13,7 +11,11 @@
   --main-weight: 400;
   --title-line-height: 83%;
   --main-line-height: 23.4px;
-  --title-color: #DB00FF;
   --accent-color: #FF0070;
+  --title-color: #DB00FF;
+  --back-main-color: #000028;
+  --main-color-title: #000028;
   --main-color: #F1B2CE;
+  --button-hover: rgba(255, 0, 112, 0.4);
+  --back-main-image: url("../images/cover-image.png");
 }

@@ -1,15 +1,12 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
-:root.theme-dark {
-  --accent-color: #FF0070;
-  --title-color: #DB00FF;
-  --back-main-color: #000028;
-  --main-color-title: #000028;
-  --main-color: #F1B2CE;
-  --button-hover: rgba(255, 0, 112, 0.4);
-  --back-main-image: url("../images/cover-image-dark.png");
+.page.theme_dark {
+  --background-image: url("../images/cover-image-dark.png");
+  --accent-color: #ff0070;
+  --accent-color-opacity: #ff007066;
+  --text-color: #f1b2ce;
+  --decoration-color: var(--accent-color);
+  --background-color: #000028;
+  --header1-color: #db00ff;
+  --header2-color: var(--accent-color);
+  --header3-color: var(--background-color);
+  --is-light: visible;
 }

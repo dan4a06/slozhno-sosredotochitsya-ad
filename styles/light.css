@@ -1,67 +1,27 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
-:root.theme-light {
-  --accent-color: #FF8DCB;
-  --title-color: #FFC2E6;
-  --back-main-color: #FFF1F7;
-  --main-color-title: #353430;
-  --main-color: #353430;
-  --button-hover: rgba(50, 49, 45, 0.4);
-  --back-main-image: url("../images/cover-image-light.png");
+.page.theme_light {
+  --background-image: url("../images/cover-image-light.png");
+  --accent-color: #ff8dcb;
+  --accent-color-opacity: #32312d66;
+  --text-color: #353430;
+  --decoration-color: var(--text-color);
+  --background-color: #fff1f7;
+  --header1-color: #ffc2e6;
+  --header2-color: var(--text-color);
+  --header3-color: var(--text-color);
+  --is-light: hidden;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --accent-color: #FF8DCB;
-    --title-color: #FFC2E6;
-    --back-main-color: #FFF1F7;
-    --main-color-title: #353430;
-    --main-color: #353430;
-    --button-hover: rgba(50, 49, 45, 0.4);
-    --back-main-image: url("../images/cover-image-light.png");
+    --background-image: url("../images/cover-image-light.png");
+    --accent-color: #ff8dcb;
+    --accent-color-opacity: #32312d66;
+    --text-color: #353430;
+    --decoration-color: var(--text-color);
+    --background-color: #fff1f7;
+    --header1-color: #ffc2e6;
+    --header2-color: var(--text-color);
+    --header3-color: var(--text-color);
+    --is-light: hidden;
   }
-}
-
-.theme-light .header__decoration::after {
-  display: none;
-}
-
-.theme-light .header__decoration {
-  display: none;
-}
-
-.theme-light .header__theme-menu-button {
-  color: var(--main-color);
-}
-
-.theme-light .header__theme-menu-button:hover {
-  outline: 1px solid var(--button-hover);
-}
-
-.theme-light .header__theme-menu-button:focus {
-  outline: none;
-  border-bottom: 1px solid var(--main-color);
-}
-
-.theme-light ul .header__theme-menu-button_active {
-  pointer-events: none;
-  outline: 1px solid var(--main-color);
-}
-
-.theme-light ul .header__theme-menu-button_active:hover {
-  outline: 1px solid var(--button-hover);
-}
-
-.theme-light .decorated-zone::after {
-  border-block-start: 1px solid var(--main-color);
-  border-inline-end: 1px solid var(--main-color);
-}
-
-.theme-light .decorated-zone::before {
-  border-block-end: 1px solid var(--main-color);
-  border-inline-start: 1px solid var(--main-color);
 }
